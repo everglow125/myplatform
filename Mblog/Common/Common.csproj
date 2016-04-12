@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTableExtension.cs" />
     <Compile Include="EncryptHelper.cs" />
     <Compile Include="ExcelHelper.cs" />
     <Compile Include="FileUpload.cs" />

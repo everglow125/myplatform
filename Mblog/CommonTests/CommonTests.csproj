@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DataTableExtensionTests.cs" />
     <Compile Include="EncryptHelperTests.cs" />
     <Compile Include="ExcelHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

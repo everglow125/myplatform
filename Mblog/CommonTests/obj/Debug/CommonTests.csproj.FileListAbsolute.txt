@@ -8,3 +8,13 @@ F:\Demo\Mblog\CommonTests\obj\Debug\CommonTests.pdb
 F:\Demo\Mblog\CommonTests\bin\Debug\NPOI.dll
 F:\Demo\Mblog\CommonTests\bin\Debug\ICSharpCode.SharpZipLib.dll
 F:\Demo\Mblog\CommonTests\bin\Debug\NPOI.xml
+E:\slam\Mblog\CommonTests\bin\Debug\CommonTests.dll
+E:\slam\Mblog\CommonTests\bin\Debug\CommonTests.pdb
+E:\slam\Mblog\CommonTests\bin\Debug\Common.dll
+E:\slam\Mblog\CommonTests\bin\Debug\NPOI.dll
+E:\slam\Mblog\CommonTests\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\slam\Mblog\CommonTests\bin\Debug\Common.pdb
+E:\slam\Mblog\CommonTests\bin\Debug\NPOI.xml
+E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.csprojResolveAssemblyReference.cache
+E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.dll
+E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.pdb
