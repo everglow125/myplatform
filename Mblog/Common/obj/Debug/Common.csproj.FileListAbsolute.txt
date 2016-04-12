@@ -34,3 +34,10 @@ E:\slam\Mblog\Common\bin\Debug\log4net.dll
 E:\slam\Mblog\Common\bin\Debug\log4net.xml
 E:\slam\Mblog\Common\bin\Debug\Dapper.dll
 E:\slam\Mblog\Common\bin\Debug\DapperExtensions.dll
+E:\slam\Mblog\Common\bin\Debug\System.Web.Http.dll
+E:\slam\Mblog\Common\bin\Debug\System.Net.Http.Formatting.dll
+E:\slam\Mblog\Common\bin\Debug\Newtonsoft.Json.dll
+E:\slam\Mblog\Common\bin\Debug\System.Web.Http.xml
+E:\slam\Mblog\Common\bin\Debug\System.Net.Http.Formatting.xml
+E:\slam\Mblog\Common\bin\Debug\zh-Hans\System.Web.Http.resources.dll
+E:\slam\Mblog\Common\bin\Debug\zh-Hans\System.Net.Http.Formatting.resources.dll

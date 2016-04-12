@@ -20,3 +20,4 @@ E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.dll
 E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.pdb
 E:\slam\Mblog\CommonTests\bin\Debug\log4net.dll
 E:\slam\Mblog\CommonTests\bin\Debug\log4net.xml
+E:\slam\Mblog\CommonTests\bin\Debug\Dapper.dll

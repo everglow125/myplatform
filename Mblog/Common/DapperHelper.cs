@@ -12,11 +12,11 @@ namespace DataBase
 {
     public class DapperHelper
     {
-        private static string cnnstr = ConfigurationManager.AppSettings["ConnectionString"] ?? @"Data Source=SZC062\SQLEXPRESS;Initial Catalog=Mblog;User Id=sa;Password=123456;";
+        private static string cnnstr = ConfigurationManager.AppSettings["ConnectionString"] ?? @"Data Source=127.0.0.1;Initial Catalog=Mblog;User Id=sa;Password=123456;";
 
         public DapperHelper()
         {
-            cnnstr = ConfigurationManager.AppSettings["ConnectionString"] ?? @"Data Source=SZC062\SQLEXPRESS;Initial Catalog=Mblog;User Id=sa;Password=123456;";
+            cnnstr = ConfigurationManager.AppSettings["ConnectionString"] ?? @"Data Source=127.0.0.1;Initial Catalog=Mblog;User Id=sa;Password=123456;";
         }
 
         public static SqlConnection GetConnection()
