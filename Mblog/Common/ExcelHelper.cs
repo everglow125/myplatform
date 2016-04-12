@@ -122,7 +122,7 @@ namespace Common
             return CellType.String;
         }
 
-        private static void CreateSheet(IWorkbook workbook, string sheetName, DataTable source)
+        public static void CreateSheet(IWorkbook workbook, string sheetName, DataTable source)
         {
             ISheet sheet = workbook.CreateSheet(sheetName);
             IRow rowHeader = sheet.CreateRow(0);
@@ -149,7 +149,7 @@ namespace Common
             }
         }
 
-        private static MemoryStream TableToStream(DataTable dt)
+        public static MemoryStream TableToStream(DataTable dt)
         {
             if (dt == null)
                 return null;

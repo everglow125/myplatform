@@ -27,6 +27,6 @@ E:\slam\Mblog\Common\bin\Debug\System.Xml.Serialization.dll
 E:\slam\Mblog\Common\bin\Debug\NPOI.xml
 E:\slam\Mblog\Common\bin\Debug\NPOI.OOXML.xml
 E:\slam\Mblog\Common\bin\Debug\NPOI.OpenXml4Net.xml
-E:\slam\Mblog\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\slam\Mblog\Common\obj\Debug\Common.dll
 E:\slam\Mblog\Common\obj\Debug\Common.pdb
+E:\slam\Mblog\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

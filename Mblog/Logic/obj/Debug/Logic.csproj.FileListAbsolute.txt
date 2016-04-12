@@ -1,0 +1,5 @@
+E:\slam\Mblog\Logic\bin\Debug\Logic.dll
+E:\slam\Mblog\Logic\bin\Debug\Logic.pdb
+E:\slam\Mblog\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\slam\Mblog\Logic\obj\Debug\Logic.dll
+E:\slam\Mblog\Logic\obj\Debug\Logic.pdb

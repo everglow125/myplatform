@@ -57,6 +57,7 @@
     <Compile Include="DataTableExtensionTests.cs" />
     <Compile Include="EmailHelperTests.cs" />
     <Compile Include="EncryptHelperTests.cs" />
+    <Compile Include="EnumHelperTests.cs" />
     <Compile Include="ExcelHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

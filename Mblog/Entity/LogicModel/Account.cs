@@ -8,7 +8,7 @@ namespace Entity
     /// 类dt_Account。
     /// </summary>
     [Serializable]
-    public partial class Account
+    public partial class AccountInfo
     {
         #region Model
         private int _id;

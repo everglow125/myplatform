@@ -1,0 +1,5 @@
+E:\slam\Mblog\DataBase\bin\Debug\DataBase.dll
+E:\slam\Mblog\DataBase\bin\Debug\DataBase.pdb
+E:\slam\Mblog\DataBase\obj\Debug\DataBase.csprojResolveAssemblyReference.cache
+E:\slam\Mblog\DataBase\obj\Debug\DataBase.dll
+E:\slam\Mblog\DataBase\obj\Debug\DataBase.pdb

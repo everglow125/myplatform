@@ -64,12 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataTableExtension.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="Extension\DataTableExtension.cs" />
     <Compile Include="EmailHelper.cs" />
     <Compile Include="EncryptHelper.cs" />
     <Compile Include="ExcelHelper.cs" />
     <Compile Include="FileUpload.cs" />
-    <Compile Include="FormatHelper.cs" />
+    <Compile Include="Extension\FormatHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegexHelper.cs" />
     <Compile Include="SqlHelper.cs" />

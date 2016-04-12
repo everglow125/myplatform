@@ -27,7 +27,6 @@ namespace Common.Tests
 
             };
             EmailHelper.SendEmail(mail);
-            Assert.Fail();
         }
     }
 }
