@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperExtensions">
+      <HintPath>..\packages\DapperExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\npoi\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -68,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DapperHelper.cs" />
     <Compile Include="EnumHelper.cs" />
     <Compile Include="Extension\DataTableExtension.cs" />
     <Compile Include="EmailHelper.cs" />

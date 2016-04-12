@@ -3,3 +3,13 @@ E:\slam\Mblog\DataBase\bin\Debug\DataBase.pdb
 E:\slam\Mblog\DataBase\obj\Debug\DataBase.csprojResolveAssemblyReference.cache
 E:\slam\Mblog\DataBase\obj\Debug\DataBase.dll
 E:\slam\Mblog\DataBase\obj\Debug\DataBase.pdb
+E:\slam\Mblog\DataBase\bin\Debug\Common.dll
+E:\slam\Mblog\DataBase\bin\Debug\Entity.dll
+E:\slam\Mblog\DataBase\bin\Debug\NPOI.dll
+E:\slam\Mblog\DataBase\bin\Debug\log4net.dll
+E:\slam\Mblog\DataBase\bin\Debug\Dapper.dll
+E:\slam\Mblog\DataBase\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\slam\Mblog\DataBase\bin\Debug\Common.pdb
+E:\slam\Mblog\DataBase\bin\Debug\Entity.pdb
+E:\slam\Mblog\DataBase\bin\Debug\NPOI.xml
+E:\slam\Mblog\DataBase\bin\Debug\log4net.xml

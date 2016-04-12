@@ -1,1 +1,5 @@
 E:\slam\Mblog\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+E:\slam\Mblog\Entity\bin\Debug\Entity.dll
+E:\slam\Mblog\Entity\bin\Debug\Entity.pdb
+E:\slam\Mblog\Entity\obj\Debug\Entity.dll
+E:\slam\Mblog\Entity\obj\Debug\Entity.pdb

@@ -3,3 +3,15 @@ E:\slam\Mblog\Logic\bin\Debug\Logic.pdb
 E:\slam\Mblog\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
 E:\slam\Mblog\Logic\obj\Debug\Logic.dll
 E:\slam\Mblog\Logic\obj\Debug\Logic.pdb
+E:\slam\Mblog\Logic\bin\Debug\DataBase.dll
+E:\slam\Mblog\Logic\bin\Debug\Entity.dll
+E:\slam\Mblog\Logic\bin\Debug\Common.dll
+E:\slam\Mblog\Logic\bin\Debug\NPOI.dll
+E:\slam\Mblog\Logic\bin\Debug\log4net.dll
+E:\slam\Mblog\Logic\bin\Debug\Dapper.dll
+E:\slam\Mblog\Logic\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\slam\Mblog\Logic\bin\Debug\DataBase.pdb
+E:\slam\Mblog\Logic\bin\Debug\Entity.pdb
+E:\slam\Mblog\Logic\bin\Debug\Common.pdb
+E:\slam\Mblog\Logic\bin\Debug\NPOI.xml
+E:\slam\Mblog\Logic\bin\Debug\log4net.xml

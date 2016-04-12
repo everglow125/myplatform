@@ -32,3 +32,5 @@ E:\slam\Mblog\Common\obj\Debug\Common.pdb
 E:\slam\Mblog\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\slam\Mblog\Common\bin\Debug\log4net.dll
 E:\slam\Mblog\Common\bin\Debug\log4net.xml
+E:\slam\Mblog\Common\bin\Debug\Dapper.dll
+E:\slam\Mblog\Common\bin\Debug\DapperExtensions.dll
