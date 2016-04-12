@@ -1,0 +1,16 @@
+F:\Demo\Mblog\Common\bin\Debug\Common.dll
+F:\Demo\Mblog\Common\bin\Debug\Common.pdb
+F:\Demo\Mblog\Common\obj\Debug\Common.dll
+F:\Demo\Mblog\Common\obj\Debug\Common.pdb
+F:\Demo\Mblog\Common\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\Demo\Mblog\Common\bin\Debug\NPOI.dll
+F:\Demo\Mblog\Common\bin\Debug\NPOI.xml
+F:\Demo\Mblog\Common\bin\Debug\NPOI.OOXML.dll
+F:\Demo\Mblog\Common\bin\Debug\NPOI.OpenXml4Net.dll
+F:\Demo\Mblog\Common\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\Demo\Mblog\Common\bin\Debug\NPOI.OOXML.xml
+F:\Demo\Mblog\Common\bin\Debug\NPOI.OpenXml4Net.xml
+F:\Demo\Mblog\Common\bin\Debug\System.Xml.dll
+F:\Demo\Mblog\Common\bin\Debug\System.Xml.Linq.dll
+F:\Demo\Mblog\Common\bin\Debug\System.Xml.Serialization.dll
+F:\Demo\Mblog\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

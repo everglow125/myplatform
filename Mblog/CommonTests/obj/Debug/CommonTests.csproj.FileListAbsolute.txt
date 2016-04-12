@@ -1,0 +1,10 @@
+F:\Demo\Mblog\CommonTests\bin\Debug\CommonTests.dll
+F:\Demo\Mblog\CommonTests\bin\Debug\CommonTests.pdb
+F:\Demo\Mblog\CommonTests\bin\Debug\Common.dll
+F:\Demo\Mblog\CommonTests\bin\Debug\Common.pdb
+F:\Demo\Mblog\CommonTests\obj\Debug\CommonTests.csprojResolveAssemblyReference.cache
+F:\Demo\Mblog\CommonTests\obj\Debug\CommonTests.dll
+F:\Demo\Mblog\CommonTests\obj\Debug\CommonTests.pdb
+F:\Demo\Mblog\CommonTests\bin\Debug\NPOI.dll
+F:\Demo\Mblog\CommonTests\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\Demo\Mblog\CommonTests\bin\Debug\NPOI.xml
