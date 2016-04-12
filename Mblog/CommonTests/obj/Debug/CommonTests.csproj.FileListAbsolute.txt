@@ -18,3 +18,5 @@ E:\slam\Mblog\CommonTests\bin\Debug\NPOI.xml
 E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.csprojResolveAssemblyReference.cache
 E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.dll
 E:\slam\Mblog\CommonTests\obj\Debug\CommonTests.pdb
+E:\slam\Mblog\CommonTests\bin\Debug\log4net.dll
+E:\slam\Mblog\CommonTests\bin\Debug\log4net.xml
