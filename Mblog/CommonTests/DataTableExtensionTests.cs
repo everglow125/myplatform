@@ -40,12 +40,24 @@ namespace Common.Tests
 
             DataRow dr3 = dt.NewRow();
             dr3["姓名"] = "王五";
-            dr3["学科"] = "语文";
-            dr3["成绩"] = 90;
+            dr3["学科"] = "化学";
+            dr3["成绩"] = 88;
             dt.Rows.Add(dr3);
 
-            var result = dt.ReversalRows("姓名", "学科", "成绩");
+            DataRow dr4 = dt.NewRow();
+            dr4["姓名"] = "朱六";
+            dr4["学科"] = "政治";
+            dr4["成绩"] = 90;
+            dt.Rows.Add(dr4);
 
+            DataRow dr5 = dt.NewRow();
+            dr5["姓名"] = "朱六";
+            dr5["学科"] = "语文";
+            dr5["成绩"] = 66;
+            dt.Rows.Add(dr5);
+
+            var result = dt.ReversalRows("姓名", "学科", "成绩");
+            var result1 = dt.ReversalRows("学科", "姓名", "成绩");
             Assert.AreNotEqual(dt, result);
         }
 
