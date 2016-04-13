@@ -35,7 +35,6 @@ F:\Demo\Mblog\WebSite\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 F:\Demo\Mblog\WebSite\obj\Debug\WebSite.csprojResolveAssemblyReference.cache
 F:\Demo\Mblog\WebSite\obj\Debug\WebSite.dll
 F:\Demo\Mblog\WebSite\obj\Debug\WebSite.pdb
-E:\slam\Mblog\WebSite\bin\WebSite.dll.config
 E:\slam\Mblog\WebSite\bin\WebSite.dll
 E:\slam\Mblog\WebSite\bin\WebSite.pdb
 E:\slam\Mblog\WebSite\bin\Microsoft.Web.Infrastructure.dll
@@ -86,3 +85,4 @@ E:\slam\Mblog\WebSite\bin\Logic.pdb
 E:\slam\Mblog\WebSite\bin\NPOI.xml
 E:\slam\Mblog\WebSite\bin\log4net.xml
 E:\slam\Mblog\WebSite\bin\DataBase.pdb
+E:\slam\Mblog\WebSite\bin\Newtonsoft.Json.pdb

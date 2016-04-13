@@ -10,9 +10,29 @@ using System.Threading.Tasks;
 using System.Web;
 namespace Common
 {
-  
+
     public class CaptchaHelper
-    {//// <summary>
+    {
+        public static char[] codes = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9'
+        , 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J','K', 'L', 'M', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+        ,'a', 'b', 'c', 'd', 'e', 'f', 'g' , 'h', 'i', 'j', 'k', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w','x','y','z'};
+        /// <summary>
+        /// 生成随机验证码
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static string CreateCode(int length)
+        {
+            var random = new Random();
+            StringBuilder sb = new StringBuilder(length);
+            for (int i = 0; i < length; i++)
+            {
+                sb.Append(codes[random.Next(codes.Length)]);
+            }
+            return sb.ToString();
+        }
+
+        //// <summary>
         /// 生成验证码
         /// </summary>
         /// <param name="length">指定验证码的长度</param>
@@ -32,6 +52,7 @@ namespace Common
                 beginSeek += 10000;
                 seeks[i] = beginSeek;
             }
+
             //生成随机数字
             for (int i = 0; i < length; i++)
             {
@@ -61,9 +82,9 @@ namespace Common
         /// </summary>
         /// <param name="containsPage">要输出到的page对象</param>
         /// <param name="validateNum">验证码</param>
-        public static  byte[] CreateValidateGraphic(string validateCode)
+        public static byte[] CreateValidateGraphic(string validateCode, int width = 80)
         {
-            Bitmap image = new Bitmap((int)Math.Ceiling(validateCode.Length * 12.0), 22);
+            Bitmap image = new Bitmap(width, 22);
             Graphics g = Graphics.FromImage(image);
             try
             {

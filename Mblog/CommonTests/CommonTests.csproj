@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CaptchaHelperTests.cs" />
     <Compile Include="DataTableExtensionTests.cs" />
     <Compile Include="EmailHelperTests.cs" />
     <Compile Include="EncryptHelperTests.cs" />
