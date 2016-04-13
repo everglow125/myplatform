@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 using System.Web;
 namespace Common
 {
-
+    /// <summary>
+    /// 验证码
+    /// </summary>
     public class CaptchaHelper
     {
         public static char[] codes = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9'

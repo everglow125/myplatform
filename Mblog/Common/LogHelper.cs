@@ -26,20 +26,24 @@ namespace Common
         /// <param name="ex">错误</param>
         public static void ErrorLog(string info, Exception ex)
         {
-            if (!string.IsNullOrEmpty(info) && ex == null)
+            try
             {
-                logerror.ErrorFormat("【附加信息】 : {0}<br>", new object[] { info });
+                if (!string.IsNullOrEmpty(info) && ex == null)
+                {
+                    logerror.ErrorFormat("【附加信息】 : {0}<br>", new object[] { info });
+                }
+                else if (!string.IsNullOrEmpty(info) && ex != null)
+                {
+                    string errorMsg = BeautyErrorMsg(ex);
+                    logerror.ErrorFormat("【附加信息】 : {0}<br>{1}", new object[] { info, errorMsg });
+                }
+                else if (string.IsNullOrEmpty(info) && ex != null)
+                {
+                    string errorMsg = BeautyErrorMsg(ex);
+                    logerror.Error(errorMsg);
+                }
             }
-            else if (!string.IsNullOrEmpty(info) && ex != null)
-            {
-                string errorMsg = BeautyErrorMsg(ex);
-                logerror.ErrorFormat("【附加信息】 : {0}<br>{1}", new object[] { info, errorMsg });
-            }
-            else if (string.IsNullOrEmpty(info) && ex != null)
-            {
-                string errorMsg = BeautyErrorMsg(ex);
-                logerror.Error(errorMsg);
-            }
+            catch { }
         }
         /// <summary>
         /// 美化错误信息
