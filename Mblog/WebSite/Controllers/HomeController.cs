@@ -14,6 +14,11 @@ namespace WebSite.Controllers
     {
         public ActionResult Index()
         {
+            try { int a = Convert.ToInt32("aaa"); }
+            catch (Exception ex)
+            {
+                LogHelper.ErrorLog("test", ex);
+            }
             return View();
         }
 
