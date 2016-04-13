@@ -2,11 +2,16 @@
     ViewBag.Title = "Index";
 }
 <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
-<form action="/Home/CheckImage" method="post">
+<form action="/Home/Login" method="post">
     <h2>Index</h2>
     <p>
+        Account
+    <input type="text" id="Account" name="Account" />
+        Password 
+    <input type="password" id="Password" name="Password" />
         <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" />
-        <input type="text" id="txtCode" name="txtCode" /> <input type="submit" value="submit" />
+        <input type="text" id="txtCode" name="txtCode" />
+        <input type="submit" value="submit" />
     </p>
 </form>
 <script>
@@ -14,4 +19,4 @@
         $("#valiCode").bind("click", function () {
             this.src = "/Home/GetValidateCode?time=" + (new Date()).getTime();
         });
-    });</script>  
+    });</script>

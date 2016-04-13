@@ -12,13 +12,23 @@ namespace WebSite.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Login(AccountInfo model)
+        {
+            model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
+            var account = new AccountInfoBll().Query(model);
+            if (account == null)
+            {
+                return new ContentResult() { Content = "账号或密码错误！" };
+            }
+            else
+            {
+                Session["Account"] = account;
+                return new ContentResult() { Content = "登录成功" };
+            }
+        }
+
         public ActionResult Index()
         {
-            try { int a = Convert.ToInt32("aaa"); }
-            catch (Exception ex)
-            {
-                LogHelper.ErrorLog("test", ex);
-            }
             return View();
         }
 

@@ -15,5 +15,9 @@ namespace Logic
         {
             return dal.Insert(entity);
         }
+        public AccountInfo Query(AccountInfo model)
+        {
+            return dal.Query(model);
+        }
     }
 }

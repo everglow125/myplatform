@@ -28,5 +28,11 @@ namespace DataBase.Dal
                                    ,@Status)";
             return DapperHelper.ExecuteNonQuery(sql, entity);
         }
+
+        public AccountInfo Query(AccountInfo model)
+        {
+            string sql = "select top 1 * from dt_Account with(nolock) where password=@password and (Account=@Account or Email=@Account)";
+            return DapperHelper.ExecuteScalar<AccountInfo>(sql, model);
+        }
     }
 }
