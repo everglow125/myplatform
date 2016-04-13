@@ -129,6 +129,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Js\datepicker\css\datepicker.css" />
+    <Content Include="Js\datepicker\js\bootstrap-datepicker.js" />
     <Content Include="Js\jquery-2.2.3.min.js" />
     <Content Include="Js\UEditor\dialogs\anchor\anchor.html" />
     <Content Include="Js\UEditor\dialogs\attachment\attachment.css" />
@@ -451,6 +453,9 @@
     <Content Include="Js\UEditor\net\net.v11.suo" />
     <Content Include="Js\UEditor\net\README.md" />
     <Content Include="Js\UEditor\net\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Js\datepicker\less\datepicker.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
