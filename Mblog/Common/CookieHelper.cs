@@ -12,7 +12,7 @@ namespace Common
     {
         private static string Get3DesKey()
         {
-            return ConfigurationManager.AppSettings["key3des"];
+            return ConfigurationManager.AppSettings["key3des"] ?? "!QA@WS#ED1qa2ws3ed123456";
         }
 
         public static bool Add(string cookieName, string value, int validHours = 168)
@@ -34,8 +34,17 @@ namespace Common
 
         public static string Get(string cookieName)
         {
-            var value = HttpContext.Current.Request.Cookies["cookieName"].Value;
-            return value == null ? null : EncryptHelper.Encrypt3DES(value, Get3DesKey());
+            try
+            {
+                if (HttpContext.Current.Request.Cookies[cookieName] == null) return null;
+                var value = HttpContext.Current.Request.Cookies[cookieName].Value;
+                return EncryptHelper.Decrypt3DES(value, Get3DesKey());
+            }
+            catch (Exception ex)
+            {
+                LogHelper.ErrorLog("Cookie", ex);
+                return null;
+            }
         }
 
         public static void Disable(string cookieName)

@@ -14,6 +14,7 @@ namespace WebSite.Controllers
     {
         public ActionResult Login(AccountInfo model)
         {
+
             model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
             var account = new AccountInfoBll().Query(model);
             if (account == null)
@@ -29,6 +30,11 @@ namespace WebSite.Controllers
 
         public ActionResult Index()
         {
+            var temp = CookieHelper.Get("user");
+            if (temp == null)
+                CookieHelper.Add("user", "123456");
+            temp = CookieHelper.Get("user");
+
             return View();
         }
 
