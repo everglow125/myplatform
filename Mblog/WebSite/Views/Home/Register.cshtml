@@ -1,16 +1,27 @@
 ﻿@{
     ViewBag.Title = "账号注册";
 }
-
-<h2>账号注册</h2>
+<script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
 <form method="post" action="/Home/Register">
-    Account
-    <input type="text" id="Account" name="Account" />
-    NickName  
-    <input type="text" id="NickName" name="NickName" />
-    Email  
-    <input type="text" id="Email" name="Email" />;
-  Password 
-    <input type="password" id="Password" name="Password" />
-    <input type="submit" value="Submit" />
+    <ul>
+        <li><span>登录名</span><span>
+            <input type="text" id="Account" name="Account" /></span></li>
+        <li><span>邮箱</span><span>
+            <input type="text" id="Email" name="Email" /></span></li>
+        <li><span>密码</span><span>
+            <input type="password" id="Password" name="Password" /></span></li>
+        <li><span>确认密码</span><span>
+            <input type="password" id="ComfirmPassword" name="ComfirmPassword" /></span></li>
+        <li><span>验证码</span><span>
+            <input type="text" id="Captcha" name="Captcha" /></span><span>
+                <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" /></span></li>
+    </ul>
+    <input type="submit" value="提交" />
 </form>
+<script type="text/javascript">
+    $(function () {
+        $("#valiCode").bind("click", function () {
+            this.src = "/Home/GetValidateCode?time=" + (new Date()).getTime();
+        });
+    });
+</script>

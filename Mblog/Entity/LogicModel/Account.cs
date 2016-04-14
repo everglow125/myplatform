@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Text;
-using System.Data.SqlClient;
 namespace Entity
 {
     /// <summary>
@@ -74,6 +71,8 @@ namespace Entity
             set { _status = value; }
             get { return _status; }
         }
+        public string Captcha { get; set; }
+        public string ConfirmPassword { get; set; }
         #endregion Model
     }
 }

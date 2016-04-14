@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Common
 {
@@ -31,6 +32,16 @@ namespace Common
                     client.Send(mailmessage);
                 }
             }
+        }
+        public static void SendSysMail(EmailInfo mail)
+        {
+            mail.EnableSSL = true;
+            mail.StmpServer = ConfigurationManager.AppSettings["stmpServer"];
+            mail.MailAccount = ConfigurationManager.AppSettings["mailAccount"];
+            mail.MailPassword = ConfigurationManager.AppSettings["mailPassword"];
+            mail.NickName = ConfigurationManager.AppSettings["nickName"];
+            mail.SenderMail = ConfigurationManager.AppSettings["senderMail"];
+            SendEmail(mail);
         }
     }
 

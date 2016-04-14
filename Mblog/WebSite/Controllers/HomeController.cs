@@ -58,7 +58,16 @@ namespace WebSite.Controllers
         public ActionResult Register(AccountInfo model)
         {
             model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
-            return new ContentResult() { Content = new AccountInfoBll().Insert(model) > 0 ? "成功" : "失败" };
+            var result = new AccountInfoBll().Insert(model) > 0;
+            if (result)
+            {
+                EmailInfo mail = new EmailInfo();
+                mail.Title = "MBlog-注册激活邮件";
+                mail.Content = "<a href=\"http://127.0.0.1/active/code\">去网站激活</a>";
+                mail.RecipientMail = model.Email;
+                EmailHelper.SendSysMail(mail);
+            }
+            return new ContentResult() { Content = result ? "成功" : "失败" };
         }
 
         public ActionResult EditTest()
@@ -68,6 +77,13 @@ namespace WebSite.Controllers
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult EditTest(string mycontent)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult FileUpload(string mycontent)
         {
             return View();
         }
