@@ -30,11 +30,6 @@ namespace WebSite.Controllers
 
         public ActionResult Index()
         {
-            var temp = CookieHelper.Get("user");
-            if (temp == null)
-                CookieHelper.Add("user", "123456");
-            temp = CookieHelper.Get("user");
-
             return View();
         }
 
@@ -63,13 +58,15 @@ namespace WebSite.Controllers
         [HttpPost]
         public ActionResult Register(AccountInfo model)
         {
+            model.NickName = "";
             model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
+            model.ActiveCode = Guid.NewGuid().ToString();
             var result = new AccountInfoBll().Insert(model) > 0;
             if (result)
             {
                 EmailInfo mail = new EmailInfo();
                 mail.Title = "MBlog-注册激活邮件";
-                mail.Content = "<a href=\"http://127.0.0.1/active/code\">去网站激活</a>";
+                mail.Content = "<a href=\"http://127.0.0.1/active/" + model.ActiveCode + "\">去网站激活</a>";
                 mail.RecipientMail = model.Email;
                 EmailHelper.SendSysMail(mail);
             }

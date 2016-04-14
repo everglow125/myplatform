@@ -73,6 +73,8 @@ namespace Entity
         }
         public string Captcha { get; set; }
         public string ConfirmPassword { get; set; }
+        public string ActiveCode { get; set; }
+
         #endregion Model
     }
 }
