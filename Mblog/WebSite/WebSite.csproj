@@ -296,7 +296,6 @@
     <Content Include="Js\UEditor\net\Bin\Newtonsoft.Json.dll" />
     <Content Include="Js\UEditor\net\Bin\Newtonsoft.Json.pdb" />
     <Content Include="Js\UEditor\net\Bin\Newtonsoft.Json.xml" />
-    <Content Include="Js\UEditor\net\net.sln" />
     <Content Include="Js\UEditor\themes\default\css\ueditor.css" />
     <Content Include="Js\UEditor\themes\default\css\ueditor.min.css" />
     <Content Include="Js\UEditor\themes\default\dialogbase.css" />
@@ -413,6 +412,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Ajax\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -451,9 +451,6 @@
   <ItemGroup>
     <Content Include="Js\UEditor\net\config.json" />
     <Content Include="Js\UEditor\net\controller.ashx" />
-    <Content Include="Js\UEditor\net\net.suo" />
-    <Content Include="Js\UEditor\net\net.v11.suo" />
-    <Content Include="Js\UEditor\net\README.md" />
     <Content Include="Js\UEditor\net\Web.config" />
   </ItemGroup>
   <ItemGroup>

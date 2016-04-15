@@ -39,8 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogicModel\Account.cs" />
-    <Compile Include="LogicModel\Article.cs" />
+    <Compile Include="LogicModel\AccountInfo.cs" />
+    <Compile Include="LogicModel\ActionInfo.cs" />
+    <Compile Include="LogicModel\ArticleInfo.cs" />
+    <Compile Include="LogicModel\BookInfo.cs" />
+    <Compile Include="LogicModel\ReadingList.cs" />
+    <Compile Include="LogicModel\ReadingNotes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
