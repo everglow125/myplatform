@@ -2,16 +2,19 @@
     ViewBag.Title = "Index";
 }
 <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
-<form action="/Home/Login" method="post">
+@*上传文件时必须包含enctype = "multipart/form-data" *@
+@using (Html.BeginForm("Login", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    //<form action="/Home/Login" method="post">
     <h2>Index</h2>
     <p>
         Account
     <input type="text" id="Account" name="Account" />
         Password 
     <input type="password" id="Password" name="Password" />
-       
+        <input type="file" id="file" name="file" />
         <input type="text" id="txtCode" name="txtCode" />
         <input type="submit" value="submit" />
     </p>
-</form>
-
+    //</form>
+}

@@ -12,9 +12,16 @@ namespace WebSite.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Login(AccountInfo model)
+        public ActionResult Login(AccountInfo model, HttpPostedFileBase file)
         {
-
+            if (file != null)
+            {
+                var fileName = Path.Combine(Request.MapPath("~/Upload"), Path.GetFileName(file.FileName));
+                FileInfo fileInfo = new FileInfo(fileName);
+                if (!fileInfo.Directory.Exists)
+                    fileInfo.Directory.Create();
+                file.SaveAs(fileName);
+            }
             model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
             var account = new AccountInfoBll().Query(model);
             if (account == null)
