@@ -35,5 +35,11 @@ namespace DataBase.Dal
             string sql = "select top 1 * from dt_Account with(nolock) where password=@password and (Account=@Account or Email=@Account)";
             return DapperHelper.ExecuteScalar<AccountInfo>(sql, model);
         }
+
+        public AccountInfo QueryByAccountOrEmail(string account)
+        {
+            string sql = "select top 1 * from dt_Account with(nolock) where Account=@Account or Email=@Account";
+            return DapperHelper.ExecuteScalar<AccountInfo>(sql, new { Account = account });
+        }
     }
 }

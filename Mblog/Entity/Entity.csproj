@@ -46,6 +46,8 @@
     <Compile Include="BaseModel\BookInfo.cs" />
     <Compile Include="BaseModel\ReadingList.cs" />
     <Compile Include="BaseModel\ReadingNotes.cs" />
+    <Compile Include="LogicModel\ChangePwd.cs" />
+    <Compile Include="LogicModel\Login.cs" />
     <Compile Include="LogicModel\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

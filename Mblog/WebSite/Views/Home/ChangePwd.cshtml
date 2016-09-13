@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "修改密码";
+    @model Entity.LogicModel.ChangePwd
+}
+
+<form method="post" class="form-horizontal" action="/Home/Login">
+    @Html.HiddenFor(x => x.AccountId)
+    <div class="control-group">
+        @Html.LabelFor(x => x.OldPassword, new { @class = "control-label" })
+        <div class="controls">
+            @Html.PasswordFor(x => x.OldPassword)
+        </div>
+        @Html.ValidationMessageFor(x => x.OldPassword)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.NewPassword, new { @class = "control-label" })
+        <div class="controls">
+            @Html.PasswordFor(x => x.NewPassword)
+        </div>
+        @Html.ValidationMessageFor(x => x.NewPassword)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.ConfrimPassword, new { @class = "control-label" })
+        <div class="controls">
+            @Html.PasswordFor(x => x.ConfrimPassword)
+        </div>
+        @Html.ValidationMessageFor(x => x.ConfrimPassword)
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+    </div>
+</form>

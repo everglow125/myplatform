@@ -1,8 +1,10 @@
 ﻿@{
     ViewBag.Title = "Index";
+    var userInfo = ViewBag.userInfo as Entity.BaseModel.AccountInfo;
 }
 <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
 @*上传文件时必须包含enctype = "multipart/form-data" *@
+@(userInfo.Account + "    " + userInfo.Email)
 @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     //<form action="/Home/Login" method="post">

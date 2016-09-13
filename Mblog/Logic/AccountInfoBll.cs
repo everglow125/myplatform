@@ -20,5 +20,9 @@ namespace Logic
         {
             return dal.Query(model);
         }
+        public AccountInfo QueryByAccountOrEmail(string account)
+        {
+            return dal.QueryByAccountOrEmail(account);
+        }
     }
 }

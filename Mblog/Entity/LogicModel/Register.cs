@@ -17,5 +17,9 @@ namespace Entity.LogicModel
         [DisplayName("验证码")]
         [Required]
         public string Captcha { get; set; }
+
+        [DisplayName("确认密码")]
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
     }
 }

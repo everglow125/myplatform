@@ -24,9 +24,6 @@ namespace Entity.BaseModel
         [Required]
         [MinLength(8)]
         public string Password { get; set; }
-        [DisplayName("确认密码")]
-        [Compare("Password")]
-        public string ConfirmPassword { get; set; }
         /// <summary>
         /// 注册邮箱 唯一
         /// <summary>
@@ -59,5 +56,9 @@ namespace Entity.BaseModel
         /// 上次登录IP
         /// <summary>
         public string LastLoginIP { get; set; }
+        /// <summary>
+        /// 行为识别码
+        /// </summary>
+        public string ActionCode { get; set; }
     }
 }

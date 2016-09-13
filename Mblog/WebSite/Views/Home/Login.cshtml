@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "登录";
+    @model Entity.LogicModel.Login
+}
+
+<form method="post" class="form-horizontal" action="/Home/Login">
+    <input type="hidden" value="@ViewBag.returnUrl" />
+    <div class="control-group">
+        @Html.LabelFor(x => x.Account, new { @class = "control-label" })
+        <div class="controls">
+            @Html.EditorFor(x => x.Account)
+        </div>
+        @Html.ValidationMessageFor(x => x.Account)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.Password, new { @class = "control-label" })
+        <div class="controls">
+            @Html.PasswordFor(x => x.Password)
+        </div>
+        @Html.ValidationMessageFor(x => x.Password)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.Captcha, new { @class = "control-label" })
+        <div class="controls">
+            @Html.EditorFor(x => x.Captcha)
+        </div>
+        <span>
+            <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" /></span>
+        @Html.ValidationMessageFor(x => x.Captcha)
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+        <div class="controls">
+            <a class="btn btn-primary">注册</a>
+        </div>
+        @Html.ActionLink("忘记密码", "ForgetPwd", null, new { target = "_blank" })
+    </div>
+</form>

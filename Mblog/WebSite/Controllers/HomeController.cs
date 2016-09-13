@@ -14,18 +14,29 @@ namespace WebSite.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Login(AccountInfo model, HttpPostedFileBase file)
+        [HttpGet]
+        public ActionResult Login(string returnUrl)
         {
-            if (file != null)
-            {
-                var fileName = Path.Combine(Request.MapPath("~/Upload"), Path.GetFileName(file.FileName));
-                FileInfo fileInfo = new FileInfo(fileName);
-                if (!fileInfo.Directory.Exists)
-                    fileInfo.Directory.Create();
-                file.SaveAs(fileName);
-            }
-            model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
-            var account = new AccountInfoBll().Query(model);
+            ViewBag.returnUrl = returnUrl;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(Login model, string returnUrl)
+        {
+            //if (file != null)
+            //{
+            //    var fileName = Path.Combine(Request.MapPath("~/Upload"), Path.GetFileName(file.FileName));
+            //    FileInfo fileInfo = new FileInfo(fileName);
+            //    if (!fileInfo.Directory.Exists)
+            //        fileInfo.Directory.Create();
+            //    file.SaveAs(fileName);
+            //}
+            if (!ModelState.IsValid)
+                return View();
+            AccountInfo user = new AccountInfo();
+            user.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
+            user.Account = model.Account;
+            var account = new AccountInfoBll().Query(user);
             if (account == null)
             {
                 return new ContentResult() { Content = "账号或密码错误！" };
@@ -33,12 +44,15 @@ namespace WebSite.Controllers
             else
             {
                 Session["Account"] = account;
-                return new ContentResult() { Content = "登录成功" };
+                if (string.IsNullOrEmpty(returnUrl))
+                    return Redirect("Index");
+                return Redirect(returnUrl);
             }
         }
 
         public ActionResult Index()
         {
+            ViewBag.userInfo = Session["Account"];
             return View();
         }
 
@@ -83,6 +97,29 @@ namespace WebSite.Controllers
                 }
                 return new ContentResult() { Content = result ? "成功" : "失败" };
             }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ForgetPwd(string Account)
+        {
+
+            if (!string.IsNullOrEmpty(Account.Trim()))
+            {
+                var account = new AccountInfoBll().QueryByAccountOrEmail(Account);
+                if (account == null) return View();
+                EmailInfo mail = new EmailInfo();
+                mail.Title = "MBlog-重置密码";
+                mail.Content = "<a href=\"http://localhost:14561/Home/ChangePwd" + CacheHelper.Get<string>(account.Email + "_ActiveCode") + "\">如果不是本人操作,请忽略此邮件</a>";
+                mail.RecipientMail = account.Email;
+                EmailHelper.SendSysMail(mail);
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult ForgetPwd()
+        {
             return View();
         }
 

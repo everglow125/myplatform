@@ -2,36 +2,57 @@
     ViewBag.Title = "账号注册";
     @model  Entity.LogicModel.Register
 }
-<form method="post" action="/Home/Register">
-    <ul>
-        <li><span>@Html.LabelFor(x => x.Account)</span>
-            <span>@Html.EditorFor(x => x.Account)</span>
-            <span>@Html.ValidationMessageFor(x => x.Account)</span>
-        </li>
-        <li><span>@Html.LabelFor(x => x.Email)</span>
-            <span>@Html.EditorFor(x => x.Email)</span>
-            <span>@Html.ValidationMessageFor(x => x.Email)</span>
-        </li>
-        <li><span>@Html.LabelFor(x => x.Password)</span>
-            <span>@Html.PasswordFor(x => x.Password)</span>
-            <span>@Html.ValidationMessageFor(x => x.Password)</span>
-        </li>
-        <li><span>@Html.LabelFor(x => x.ConfirmPassword)</span>
-            <span>@Html.PasswordFor(x => x.ConfirmPassword)</span>
-            <span>@Html.ValidationMessageFor(x => x.ConfirmPassword)</span>
-        </li>
-        <li><span>@Html.LabelFor(x => x.NickName)</span>
-            <span>@Html.EditorFor(x => x.NickName)</span>
-            <span>@Html.ValidationMessageFor(x => x.NickName)</span>
-        </li>
-        <li><span>@Html.LabelFor(x => x.Captcha)</span>
-            <span>@Html.EditorFor(x => x.Captcha)</span>
-            <span>
-                <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" /></span>
-            <span>@Html.ValidationMessageFor(x => x.Captcha)</span>
-        </li>
-    </ul>
-    <input type="submit" value="提交" />
+<form method="post" class="form-horizontal" action="/Home/Register">
+    <div class="control-group">
+        @Html.LabelFor(x => x.Account, new { @class = "control-label" })
+        <div class="controls">
+            @Html.EditorFor(x => x.Account)
+        </div>
+        @Html.ValidationMessageFor(x => x.Account)
+    </div>
+
+    <div class="control-group">
+        @Html.LabelFor(x => x.Email, new { @class = "control-label" })
+        <div class="controls">
+            @Html.EditorFor(x => x.Email)
+        </div>
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.Password, new { @class = "control-label" })
+        <div class="controls">
+            @Html.PasswordFor(x => x.Password)
+        </div>
+        @Html.ValidationMessageFor(x => x.Password)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.ConfirmPassword, new { @class = "control-label" })
+        <div class="controls">
+            @Html.PasswordFor(x => x.ConfirmPassword)
+        </div>
+        @Html.ValidationMessageFor(x => x.ConfirmPassword)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.NickName, new { @class = "control-label" })
+        <div class="controls">
+            @Html.EditorFor(x => x.NickName)
+        </div>
+        @Html.ValidationMessageFor(x => x.NickName)
+    </div>
+    <div class="control-group">
+        @Html.LabelFor(x => x.Captcha, new { @class = "control-label" })
+        <div class="controls">
+            @Html.EditorFor(x => x.Captcha)
+        </div>
+        <span>
+            <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" /></span>
+        @Html.ValidationMessageFor(x => x.Captcha)
+    </div>
+    <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">提交</button>
+    </div>
+  </div>
 </form>
 <script type="text/javascript">
     $(function () {
