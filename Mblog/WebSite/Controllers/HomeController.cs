@@ -1,5 +1,7 @@
 ﻿using Common;
 using Entity;
+using Entity.BaseModel;
+using Entity.LogicModel;
 using Logic;
 using System;
 using System.Collections.Generic;
@@ -63,21 +65,25 @@ namespace WebSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(AccountInfo model)
+        public ActionResult Register(Register model)
         {
-            model.NickName = "";
-            model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
-            CacheHelper.Add<string>(model.Email + "_ActiveCode", Guid.NewGuid().ToString());
-            var result = new AccountInfoBll().Insert(model) > 0;
-            if (result)
+            if (ModelState.IsValid)
             {
-                EmailInfo mail = new EmailInfo();
-                mail.Title = "MBlog-注册激活邮件";
-                mail.Content = "<a href=\"http://127.0.0.1/active/" + CacheHelper.Get<string>(model.Email + "_ActiveCode") + "\">去网站激活</a>";
-                mail.RecipientMail = model.Email;
-                EmailHelper.SendSysMail(mail);
+                model.NickName = "";
+                model.Password = EncryptHelper.EncryptMD5(model.Password + "everglow");
+                CacheHelper.Add<string>(model.Email + "_ActiveCode", Guid.NewGuid().ToString());
+                var result = new AccountInfoBll().Insert(model) > 0;
+                if (result)
+                {
+                    EmailInfo mail = new EmailInfo();
+                    mail.Title = "MBlog-注册激活邮件";
+                    mail.Content = "<a href=\"http://127.0.0.1/active/" + CacheHelper.Get<string>(model.Email + "_ActiveCode") + "\">去网站激活</a>";
+                    mail.RecipientMail = model.Email;
+                    EmailHelper.SendSysMail(mail);
+                }
+                return new ContentResult() { Content = result ? "成功" : "失败" };
             }
-            return new ContentResult() { Content = result ? "成功" : "失败" };
+            return View();
         }
 
         public ActionResult EditTest()

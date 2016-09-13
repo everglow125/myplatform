@@ -1,20 +1,35 @@
 ﻿@{
     ViewBag.Title = "账号注册";
+    @model  Entity.LogicModel.Register
 }
-<script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
 <form method="post" action="/Home/Register">
     <ul>
-        <li><span>登录名</span><span>
-            <input type="text" id="Account" name="Account" /></span></li>
-        <li><span>邮箱</span><span>
-            <input type="text" id="Email" name="Email" /></span></li>
-        <li><span>密码</span><span>
-            <input type="password" id="Password" name="Password" /></span></li>
-        <li><span>确认密码</span><span>
-            <input type="password" id="ComfirmPassword" name="ComfirmPassword" /></span></li>
-        <li><span>验证码</span><span>
-            <input type="text" id="Captcha" name="Captcha" /></span><span>
-                <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" /></span></li>
+        <li><span>@Html.LabelFor(x => x.Account)</span>
+            <span>@Html.EditorFor(x => x.Account)</span>
+            <span>@Html.ValidationMessageFor(x => x.Account)</span>
+        </li>
+        <li><span>@Html.LabelFor(x => x.Email)</span>
+            <span>@Html.EditorFor(x => x.Email)</span>
+            <span>@Html.ValidationMessageFor(x => x.Email)</span>
+        </li>
+        <li><span>@Html.LabelFor(x => x.Password)</span>
+            <span>@Html.PasswordFor(x => x.Password)</span>
+            <span>@Html.ValidationMessageFor(x => x.Password)</span>
+        </li>
+        <li><span>@Html.LabelFor(x => x.ConfirmPassword)</span>
+            <span>@Html.PasswordFor(x => x.ConfirmPassword)</span>
+            <span>@Html.ValidationMessageFor(x => x.ConfirmPassword)</span>
+        </li>
+        <li><span>@Html.LabelFor(x => x.NickName)</span>
+            <span>@Html.EditorFor(x => x.NickName)</span>
+            <span>@Html.ValidationMessageFor(x => x.NickName)</span>
+        </li>
+        <li><span>@Html.LabelFor(x => x.Captcha)</span>
+            <span>@Html.EditorFor(x => x.Captcha)</span>
+            <span>
+                <img id="valiCode" style="cursor: pointer;" src="/Home/GetValidateCode" alt="验证码" /></span>
+            <span>@Html.ValidationMessageFor(x => x.Captcha)</span>
+        </li>
     </ul>
     <input type="submit" value="提交" />
 </form>

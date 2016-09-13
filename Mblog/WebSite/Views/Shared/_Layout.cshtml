@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>百无禁忌</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="/Js/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/Js/bootstrap/css/bootstrap.min.css">
+    @Html.Partial("_PageHeader")
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <script src="/Js/jquery-2.2.3.min.js"></script>
+    <script src="/Js/bootstrap/js/bootstrap.min.js"></script>
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="@Url.Action("Index", "Home", new { area = "" })" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>S</b>CF</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>百无禁忌</b>SCF</span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar " role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        @Html.Partial("_UserInfo")
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+        </footer>
+
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+</body>
+</html>

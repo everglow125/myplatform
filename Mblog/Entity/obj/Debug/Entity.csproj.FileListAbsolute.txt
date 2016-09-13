@@ -3,3 +3,8 @@ E:\slam\Mblog\Entity\bin\Debug\Entity.dll
 E:\slam\Mblog\Entity\bin\Debug\Entity.pdb
 E:\slam\Mblog\Entity\obj\Debug\Entity.dll
 E:\slam\Mblog\Entity\obj\Debug\Entity.pdb
+D:\myplatform\Mblog\Entity\bin\Debug\Entity.dll
+D:\myplatform\Mblog\Entity\bin\Debug\Entity.pdb
+D:\myplatform\Mblog\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+D:\myplatform\Mblog\Entity\obj\Debug\Entity.dll
+D:\myplatform\Mblog\Entity\obj\Debug\Entity.pdb

@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,12 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogicModel\AccountInfo.cs" />
-    <Compile Include="LogicModel\ActionInfo.cs" />
-    <Compile Include="LogicModel\ArticleInfo.cs" />
-    <Compile Include="LogicModel\BookInfo.cs" />
-    <Compile Include="LogicModel\ReadingList.cs" />
-    <Compile Include="LogicModel\ReadingNotes.cs" />
+    <Compile Include="BaseModel\AccountInfo.cs" />
+    <Compile Include="BaseModel\ActionInfo.cs" />
+    <Compile Include="BaseModel\ArticleInfo.cs" />
+    <Compile Include="BaseModel\BookInfo.cs" />
+    <Compile Include="BaseModel\ReadingList.cs" />
+    <Compile Include="BaseModel\ReadingNotes.cs" />
+    <Compile Include="LogicModel\Register.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

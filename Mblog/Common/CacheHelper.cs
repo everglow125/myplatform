@@ -12,7 +12,7 @@ namespace Common
     {
         public static void Add<T>(string key, T value, int seconds = 1440)
         {
-            HttpContext.Current.Cache.Insert("GridViewDataSet ", value, null, DateTime.Now.AddSeconds(seconds), Cache.NoSlidingExpiration);
+            HttpContext.Current.Cache.Insert(key, value, null, DateTime.Now.AddSeconds(seconds), Cache.NoSlidingExpiration);
         }
 
         public static T Get<T>(string key) where T : class
