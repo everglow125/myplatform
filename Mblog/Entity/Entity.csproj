@@ -44,6 +44,8 @@
     <Compile Include="BaseModel\ActionInfo.cs" />
     <Compile Include="BaseModel\ArticleInfo.cs" />
     <Compile Include="BaseModel\BookInfo.cs" />
+    <Compile Include="BaseModel\LotteryAction.cs" />
+    <Compile Include="BaseModel\LotteryAward.cs" />
     <Compile Include="BaseModel\ReadingList.cs" />
     <Compile Include="BaseModel\ReadingNotes.cs" />
     <Compile Include="LogicModel\ChangePwd.cs" />
